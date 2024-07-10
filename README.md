@@ -1,3 +1,3 @@
 # Go-Files
 
-very simple file-server
+very simple file storage microservice
