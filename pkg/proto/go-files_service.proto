@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package gofiles;
+
+option go_package = "pkg/proto";
+
+service FileService {
+    rpc SaveFile(SaveFileRequest) returns (SaveFileResponse);
+    rpc GetPublicURL(GetPublicURLRequest) returns (GetPublicURLResponse);
+}
+
+message SaveFileRequest {
+    bytes data = 1;
+}
+
+message SaveFileResponse {
+    string uuid = 1;
+}
+
+message GetPublicURLRequest {
+    string uuid = 1;
+}
+
+message GetPublicURLResponse {
+    string url = 1;
+}
