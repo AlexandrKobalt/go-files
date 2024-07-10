@@ -25,7 +25,7 @@ func main() {
 
 	app := fiber.New()
 
-	app.Get(fmt.Sprintf("/%s/:key", cfg.HTTP.Address), newSystemDeliveryHTTP.ServeFile())
+	app.Get(fmt.Sprintf("/%s/:key", cfg.Path), newSystemDeliveryHTTP.ServeFile())
 
 	srv := server.New(
 		cfg,
